@@ -4,13 +4,20 @@ import { PlaylistSpec } from "../models/joi-schemas.js";
 export const dashboardController = {
   index: {
     handler: async function (request, h) {
-      const loggedInUser = request.auth.credentials;
+      // const loggedInUser = request.auth.credentials;
+      let loggedInUser = null;
+      if (request.auth.isAuthenticated) {
+        loggedInUser = request.auth.credentials;
+      }
       const playlists = await db.playlistStore.getUserPlaylists(loggedInUser._id);
+      const test = loggedInUser ? true : false; 
       const viewData = {
         title: "Playtime Dashboard",
         user: loggedInUser,
         playlists: playlists,
+        test: test,
       };
+     
       return h.view("dashboard-view", viewData);
     },
   },

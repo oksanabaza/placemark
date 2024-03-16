@@ -1,16 +1,26 @@
 .welcome-background {
     width: 100vw;
     min-height: 100vh;
-    /* min-height: 100%; */
-    /* background-image: url("../images/background-image.jpg"); */
-    background-color:aqua;
+    height: 100%;
+    background-image: url("../images/background-image.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.body-background{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("../images/gradient.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+}
 .navbar {
  background-color: transparent;
+}
+.button {
+    border-color: transparent !important;
 }
 .is-colored {
     background-color: antiquewhite; /* Replace 'yourcolor' with the desired color */

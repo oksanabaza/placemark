@@ -43,6 +43,7 @@ export const concerto = {
   duration: 15,
   lat: 15,
   description:"Descr",
+  img:"image",
 };
 
 export const beethoven = {
@@ -68,6 +69,7 @@ export const testTracks = [
     duration: 5,
     lat: 15,
     description:"Descr",
+    img:"image",
   },
   {
     title: "Piano Sonata No. 7",
@@ -75,6 +77,7 @@ export const testTracks = [
     duration: 6,
     lat: 15,
     description:"Descr",
+    img:"image",
   },
   {
     title: "Piano Sonata No. 10",
@@ -82,5 +85,6 @@ export const testTracks = [
     duration: 4,
     lat: 15,
     description:"Descr",
+    img:"image",
   },
 ];

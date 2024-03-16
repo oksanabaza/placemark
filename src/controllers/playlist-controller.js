@@ -5,10 +5,17 @@ import { imageStore } from "../models/mongo/image-store.js";
 export const playlistController = {
   index: {
     handler: async function (request, h) {
+      let loggedInUser = null;
+      if (request.auth.isAuthenticated) {
+        loggedInUser = request.auth.credentials;
+      }
+      const test = loggedInUser ? true : false; 
       const playlist = await db.playlistStore.getPlaylistById(request.params.id);
       const viewData = {
         title: "Playlist",
+        user: loggedInUser,
         playlist: playlist,
+        test: test,
       };
       return h.view("playlist-view", viewData);
     },
@@ -27,7 +34,8 @@ export const playlistController = {
         title: request.payload.title,
         artist: request.payload.artist,
         duration: Number(request.payload.duration),
-        lat: Number(request.payload.duration),
+        lat: Number(request.payload.lat),
+        img: request.payload.img,
         description: request.payload.description,
       };
       await db.trackStore.addTrack(playlist._id, newTrack);

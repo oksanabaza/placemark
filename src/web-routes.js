@@ -1,5 +1,6 @@
 import { aboutController } from "./controllers/about-controller.js";
 import { accountsController } from "./controllers/accounts-controller.js";
+import { accountController } from "./controllers/account-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { playlistController } from "./controllers/playlist-controller.js";
 
@@ -12,6 +13,8 @@ export const webRoutes = [
   { method: "POST", path: "/authenticate", config: accountsController.login },
 
   { method: "GET", path: "/about", config: aboutController.index },
+  { method: "GET", path: "/account", config: accountController.index },
+
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
   { method: "POST", path: "/dashboard/addplaylist", config: dashboardController.addPlaylist },

@@ -10,8 +10,20 @@
   </head>
 
   {{!-- <body class="welcome-background"> --}}
-    <body class="welcome-background">
+  
     <div class="container">
+     {{#if user}}
+     <body class="body-background">
+      {{!-- <div>You are logged in</div> --}}
+      {{#if test}}
+        {{!-- <div>Test is true</div> --}}
+      {{else}}
+        {{!-- <div>Test is false</div> --}}
+      {{/if}}
+    {{else}}
+    <body class="welcome-background">
+      {{!-- <div>You are not logged in</div> --}}
+    {{/if}}
       {{{content}}}
       {{> error }}
     </div>

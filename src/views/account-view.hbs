@@ -1,0 +1,29 @@
+{{> menu active="account"}}
+
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <form class="box" action="/api/users/{{user._id}}/update" method="POST">
+        <div class="field">
+          <div class="">
+            <div class="field">
+              <input class="input" type="text" placeholder="Enter First Name" name="firstName" value="{{user.firstName}}">
+            </div>
+            <div class="field">
+              <input class="input" type="text" placeholder="Enter Last Name" name="lastName" value="{{user.lastName}}">
+            </div>
+            <div class="field">
+              <input class="input" type="email" placeholder="Enter Email" name="email" value="{{user.email}}">
+            </div>
+            <div class="field">
+              <input class="input" type="password" placeholder="Enter Password" name="password" value="{{user.password}}">
+            </div>
+            <div>
+              <button class="button colored-btn">Update Info</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

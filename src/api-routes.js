@@ -8,6 +8,7 @@ export const apiRoutes = [
   { method: "DELETE", path: "/api/users", config: userApi.deleteAll },
   { method: "GET", path: "/api/users/{id}", config: userApi.findOne },
   { method: "POST", path: "/api/users/authenticate", config: userApi.authenticate },
+  { method: "POST", path: "/api/users/{id}/update", config: userApi.update },
 
   { method: "POST", path: "/api/playlists", config: playlistApi.create },
   { method: "DELETE", path: "/api/playlists", config: playlistApi.deleteAll },
@@ -20,4 +21,5 @@ export const apiRoutes = [
   { method: "POST", path: "/api/playlists/{id}/tracks", config: trackApi.create },
   { method: "DELETE", path: "/api/tracks", config: trackApi.deleteAll },
   { method: "DELETE", path: "/api/tracks/{id}", config: trackApi.deleteOne },
+
 ];

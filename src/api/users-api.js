@@ -65,6 +65,35 @@ export const userApi = {
     response: { schema: UserSpecPlus, failAction: validationError },
   },
 
+  update: {
+    auth: false,
+    handler: async function (request, h) {
+        try {
+            const userId = request.params.id;
+            const updatedUser = request.payload; 
+            const user = await db.userStore.getUserById(userId);
+            if (!user) {
+                return Boom.notFound("User not found");
+            }
+
+            await db.userStore.updateUserById(userId, updatedUser);
+            return updatedUser;
+        } catch (err) {
+            return Boom.serverUnavailable("Database Error");
+        }
+    },
+    tags: ["api"],
+    description: "Update a User",
+    notes: "Updates an existing user with new data",
+    validate: {
+        params: { id: IdSpec },
+        payload: UserSpec, // Assuming UserSpec represents the schema for updating user data
+        failAction: validationError,
+    },
+    response: { schema: UserSpecPlus, failAction: validationError },
+},
+
+
   deleteAll: {
     auth: {
       strategy: "jwt",

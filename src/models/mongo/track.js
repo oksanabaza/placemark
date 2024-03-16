@@ -8,6 +8,7 @@ const trackSchema = new Schema({
   duration: Number,
   lat: Number,
   description: String,
+  img: String,
   playlistid: {
     type: Schema.Types.ObjectId,
     ref: "Playlist",

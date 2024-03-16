@@ -41,6 +41,8 @@ export const concerto = {
   title: "Violin Concerto No. 3",
   artist: "Mozart",
   duration: 15,
+  lat: 15,
+  description:"Descr",
 };
 
 export const beethoven = {
@@ -64,15 +66,21 @@ export const testTracks = [
     title: "Piano Sonata No. 3",
     artist: "Beethoven",
     duration: 5,
+    lat: 15,
+    description:"Descr",
   },
   {
     title: "Piano Sonata No. 7",
     artist: "Beethoven",
     duration: 6,
+    lat: 15,
+    description:"Descr",
   },
   {
     title: "Piano Sonata No. 10",
     artist: "Beethoven",
     duration: 4,
+    lat: 15,
+    description:"Descr",
   },
 ];

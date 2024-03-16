@@ -33,6 +33,8 @@ export const seedData = {
       title: "Violin Concerto No. 1",
       artist: "Mozart",
       duration: 15,
+      lat:8,
+      description:"Description",
       playlistid: "->playlists.mozart"
     },
   }

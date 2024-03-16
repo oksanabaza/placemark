@@ -33,6 +33,8 @@ export const TrackSpec = Joi.object()
     title: Joi.string().required().example("Piano Sonata No. 7"),
     artist: Joi.string().required().example("Beethoven"),
     duration: Joi.number().allow("").optional().example(12),
+    lat: Joi.number().allow("").optional().example(12),
+    description: Joi.string().required().example("Description"),
     playlistid: IdSpec,
   })
   .label("Track");

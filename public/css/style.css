@@ -1,0 +1,31 @@
+.welcome-background {
+    width: 100vw;
+    min-height: 100vh;
+    /* min-height: 100%; */
+    /* background-image: url("../images/background-image.jpg"); */
+    background-color:aqua;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+ background-color: transparent;
+}
+.is-colored {
+    background-color: antiquewhite; /* Replace 'yourcolor' with the desired color */
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+}
+
+.un-padding{
+    padding: 0;
+}
+.colored-btn{
+    background-color: antiquewhite;
+    border-color: antiquewhite;
+}
+.button{
+    border-color: white;
+}

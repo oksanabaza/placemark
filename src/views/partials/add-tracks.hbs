@@ -1,7 +1,7 @@
 <form class="box" action="/playlist/{{playlist._id}}/addtrack" method="POST">
-  <label>Enter Track Details:</label>
-  <div class="field is-horizontal">
-    <div class="field-body">
+  <label>Add World Heritage:</label>
+  <div class="field">
+    <div class="">
       <div class="field">
         <input class="input" type="text" placeholder="Enter Title" name="title">
       </div>
@@ -15,9 +15,14 @@
         <input class="input" type="text" placeholder="Enter duration" name="lat">
       </div>
        <div class="field">
-        <input class="input" type="text" placeholder="Enter duration" name="description">
+        <input class="input" type="text" placeholder="Enter descr" name="description">
       </div>
-    </div>
+       <div class="field">
+        <input class="input" type="text" placeholder="Enter duration" name="img">
+      </div>
+      <div>
+     <button class="button colored-btn">Add Heritage</button>
   </div>
-  <button class="button is-primary">Add Track</button>
+    </div>
+  </div>  
 </form>

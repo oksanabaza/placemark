@@ -66,6 +66,43 @@ export const trackApi = {
     response: { schema: TrackSpecPlus, failAction: validationError },
   },
 
+  uploadImage: {
+    auth: {
+      strategy: "jwt",
+    },
+    handler: async function (request, h) {
+      try {
+        const track = await db.trackStore.getTrackById(request.params.id);
+        if (!track) {
+          return Boom.notFound("No track with this id");
+        }
+
+        const file = request.payload.imagefile;
+        if (!file || Object.keys(file).length === 0) {
+          return Boom.badRequest("No image file provided");
+        }
+
+        const imageUrl = await imageStore.uploadImage(file);
+        track.image = imageUrl;
+        await db.trackStore.updateTrack(track);
+
+        return { imageUrl };
+      } catch (err) {
+        return Boom.serverUnavailable("Error uploading image");
+      }
+    },
+    payload: {
+      output: "stream",
+      parse: true,
+      allow: "multipart/form-data",
+      maxBytes: 209715200, // Maximum image size (200MB)
+    },
+    tags: ["api"],
+    description: "Upload image for a track",
+    notes: "Returns the URL of the uploaded image",
+    validate: { params: { id: IdSpec }, failAction: validationError },
+  },
+
   deleteAll: {
     auth: {
       strategy: "jwt",

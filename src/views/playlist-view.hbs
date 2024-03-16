@@ -1,14 +1,17 @@
 {{> menu}}
-
-<section class="section columns">
-  <div class="column has-text-centered">
-    <div class="title">
+   <div class="column title has-text-centered">
       {{playlist.title}}
     </div>
+<section class="section columns">
+  <div class="column has-text-centered">
     {{> list-tracks}}
-    {{> add-tracks}}
   </div>
-  {{!-- <div class="column">
-    {{> playlist-image }}
-  </div> --}}
+  <div class="column">
+    <div>
+      {{> playlist-image }}
+    </div>
+    <div class="mt-4">
+      {{> add-tracks}}
+    </div>
+  </div>
 </section>

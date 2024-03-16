@@ -35,6 +35,7 @@ export const TrackSpec = Joi.object()
     duration: Joi.number().allow("").optional().example(12),
     lat: Joi.number().allow("").optional().example(12),
     description: Joi.string().required().example("Description"),
+    img: Joi.string().required().example("image"),
     playlistid: IdSpec,
   })
   .label("Track");

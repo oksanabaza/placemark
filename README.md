@@ -25,8 +25,8 @@ The UNESCO Heritage Spots project is a web application aimed at showcasing and m
 
 ## Live Demo
 
-- Heroku Link: [UNESCO Heritage Spots](https://unesco-heritage-spots.herokuapp.com/)
-- Glitch Link: [UNESCO Heritage Spots on Glitch](https://glitch.com/~unesco-heritage-spots)
+- Render Link: [UNESCO Heritage Spots](https://placemark-br40.onrender.com/)
+
 
 ## Technology Stack
 
@@ -81,5 +81,7 @@ The UNESCO Heritage Spots project is a web application aimed at showcasing and m
 
 ## Login Info
 
-email: "homer@simpson.com"
-password: "secret"
+https://placemark-br40.onrender.com/
+
+- email: "homer@simpson.com"
+- password: "secret"

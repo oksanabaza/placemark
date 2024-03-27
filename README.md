@@ -47,7 +47,6 @@ email: "homer@simpson.com" password: "secret".
 -  Font Awesome
 -  Mocha
 -  Chai
--  Glitch
 
 ## Website URL
 
